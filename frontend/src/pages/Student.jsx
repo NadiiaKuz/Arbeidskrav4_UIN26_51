@@ -1,3 +1,5 @@
+import Assignments from "../components/Assignments";
+
 export default function Student() {
     return (
         <main>
@@ -9,6 +11,7 @@ export default function Student() {
                     <p>E-post: <a href="mailto:nadiia.kuz@example.com">nadiia.kuz@example.com</a></p>
                 </address>
                 <p>Bachelorstudie: Informasjonssystemer, 2. år </p>
+                <Assignments />
             </section>
         </main>
     )
