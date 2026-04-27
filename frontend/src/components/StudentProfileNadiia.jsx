@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function StudentProfile({ sanityStudent }) {
+export default function StudentProfileNadiia({ sanityStudent }) {
     
     return ( 
         <article className="student-profile-nadiia">
