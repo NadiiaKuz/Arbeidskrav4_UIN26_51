@@ -4,7 +4,7 @@ import client from "../helpers/client";
 export default function StudentProfile({ sanityStudent }) {
     
     return (
-        <Link to={`/${sanityStudent.slug}`}>
+        <Link to={`/${sanityStudent.slug}`} className="student-profile">
             <article>
                 <h2>{sanityStudent?.studentname}</h2>
                 <img src={sanityStudent?.imageUrl} alt={sanityStudent?.studentname} />

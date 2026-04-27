@@ -31,17 +31,17 @@ export default function Student() {
     console.log(sanityAssignments)
 
     return (
-        <main>
+        <main className="student-main">
             <h1>Student</h1>
             <img src={sanityStudent?.imageUrl} alt={sanityStudent?.studentname} />
-            <section>
+            <section className="student-info">
                 <h2>{sanityStudent?.studentname}</h2>
                 <address>
                     <p>E-post: <a href={`mailto:${sanityStudent?.email}`}>{sanityStudent?.email}</a></p>
                 </address>
                 <p>Bachelorstudie: {sanityStudent?.bachelorprogram}</p>
             </section>
-            <section>
+            <section className="assignment-list">
                 <h2>Oversikt over arbeidskrav fra UIN</h2>
                 {sanityAssignments?.map(a => <Assignment key={a._id} a={a} />)}
             </section>

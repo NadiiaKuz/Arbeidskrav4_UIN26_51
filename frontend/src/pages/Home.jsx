@@ -18,8 +18,9 @@ export default function Home() {
     return (
         <main>
             <h1>Velkommen til forsiden til UIN26_51-gruppen</h1>
-
-            {sanityStudent?.map(student => (<StudentProfile key={student._id} sanityStudent={student} />))}
+            <section className="student-list">
+                {sanityStudent?.map(student => (<StudentProfile key={student._id} sanityStudent={student} />))}
+            </section>
         </main>
     )
 }

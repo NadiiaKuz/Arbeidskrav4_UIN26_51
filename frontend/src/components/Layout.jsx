@@ -4,7 +4,7 @@ export default function Layout({ children }) {
     return (
         <>
             <header>
-                <nav>
+                <nav className="main-nav">
                     <Link to='/'>Forside</Link>
                 </nav>
             </header>
