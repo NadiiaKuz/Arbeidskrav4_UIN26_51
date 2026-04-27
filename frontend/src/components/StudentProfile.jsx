@@ -3,12 +3,16 @@ import client from "../helpers/client";
 
 export default function StudentProfile({ sanityStudent }) {
     
-    return (
-        <Link to={`/${sanityStudent.slug}`} className="student-profile">
-            <article>
+    return ( 
+        <article className="student-profile">
+            <Link to={`/${sanityStudent.slug}`}>
                 <h2>{sanityStudent?.studentname}</h2>
                 <img src={sanityStudent?.imageUrl} alt={sanityStudent?.studentname} />
-            </article>
-        </Link>
+            </Link>
+            <address>
+                <p>E-post: <a href={`mailto:${sanityStudent?.email}`} onClick={(e) => e.stopPropagation()}>{sanityStudent?.email}</a></p>
+            </address>
+            <p>Bachelorstudie: {sanityStudent?.bachelorprogram}</p>
+        </article>
     )
 }

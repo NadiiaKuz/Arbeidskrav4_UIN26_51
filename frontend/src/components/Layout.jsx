@@ -4,6 +4,7 @@ export default function Layout({ children }) {
     return (
         <>
             <header>
+                <h1>Velkommen til UIN26_51-gruppen</h1>
                 <nav className="main-nav">
                     <Link to='/'>Forside</Link>
                 </nav>
