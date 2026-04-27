@@ -1,14 +1,21 @@
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+
+header {
+  border-bottom: 1px solid #a396a4;
+  padding: 1rem;
+
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
 }
 
 footer {
   margin-top: 3rem;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #a396a4;
   padding: 1rem;
   text-align: left ;
+  color: #a396a4;
 }
 
 main {
@@ -17,7 +24,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .assignment-list {
@@ -26,12 +33,11 @@ main {
 
     .assignment {
       text-align: left;
-      margin-bottom: 2rem;
     }
   }
 }
 
-.student-profile {
+.student-profile-nadiia {
   border: 1px solid #f481fc;
   background-color: #422f44;
   min-width: 250px;

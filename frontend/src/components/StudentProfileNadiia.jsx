@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import client from "../helpers/client";
 
 export default function StudentProfile({ sanityStudent }) {
     
     return ( 
-        <article className="student-profile">
+        <article className="student-profile-nadiia">
             <Link to={`/${sanityStudent.slug}`}>
                 <h2>{sanityStudent?.studentname}</h2>
                 <img src={sanityStudent?.imageUrl} alt={sanityStudent?.studentname} />

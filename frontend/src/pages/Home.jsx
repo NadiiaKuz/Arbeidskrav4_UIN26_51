@@ -1,4 +1,4 @@
-import StudentProfile from "../components/StudentProfile";
+import StudentProfileNadiia from "../components/StudentProfileNadiia";
 import { useEffect, useState } from "react";
 import client from "../helpers/client";
 
@@ -23,10 +23,20 @@ export default function Home() {
     console.log(sanityStudent)
     console.log(sanityAssignments)
 
+    // Mapping av slug til komponent
+    // Hvis det kommer flere studenter, kan vi legge til flere komponenter her
+    const studentComponents = {
+        'nadiia-kuz': StudentProfileNadiia
+    };
+
     return (
         <main>
             <section className="student-list">
-                {sanityStudent?.map(student => (<StudentProfile key={student._id} sanityStudent={student} />))}
+                {sanityStudent?.map(student => {
+                    // Velger komponent basert på slug
+                    const StudentComponent = studentComponents[student.slug];
+                    return <StudentComponent key={student._id} sanityStudent={student} />
+                })}
             </section>
             <section className="assignment-list">
                 <h2>Oversikt over arbeidskrav fra UIN</h2>
