@@ -1,0 +1,18 @@
+import { Link } from "react-router-dom";
+
+export default function Layout({ children }) {
+    return (
+        <>
+            <header>
+                <h1>Velkommen til UIN26_51-gruppen</h1>
+                <nav className="main-nav">
+                    <Link to='/'>Forside</Link>
+                </nav>
+            </header>
+            {children}
+            <footer>
+                <p>2026 Utvikling av interaktive nettsteder - Arbeidskrav 4</p>
+            </footer>
+        </>
+    )
+}
